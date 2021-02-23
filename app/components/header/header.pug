@@ -1,26 +1,24 @@
-mixin header(status, navigation)
+mixin header(status, navigations)
   header.header
     .header-container
-      a.header-logo(href="/index.pug"): img(src="../../logo.svg", alt="Toxin")
-      a.js-header-burger(href="/")
+      a.header-logo(href="index.pug"): img(src="../../logo.svg", alt="Toxin")
+      a.burger(href="/")
       nav.header-nav
         ul
-          li.header-items
-            a.header-link(href="../header/header.pug") UI компоненты
+          li.header-item
+            a.header-link(href="/") UI Компоненты
           each item in navigations
             if item.submenu
-              li.header-item.header-item_has-submenu
+              li.header-item.submenu
                 a.header-link(href="#") #{item.name}
-            else 
+            else
               li.header-item
                 a.header-link(href="#") #{item.name}
-        ul.header_user-nav
-          if status === "non-autorized"
+        ul
+          if status === "unautorized"
             li.header-item
-              +btn({text: "Войти", href: "/"})
             li.header-item
-              +btn({text: "Зарегистрироваться", theme: "gradient", href: "/"})
-          else status === "autorized"
-            li.header-item
-              span.header_user-name
-                a(href="/").header-link maxx52
+          else if status === "authorized"
+            li.header__item
+              span.header__user-name
+                a(href="/").header__link maxx
