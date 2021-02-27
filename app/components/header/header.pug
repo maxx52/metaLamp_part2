@@ -1,3 +1,7 @@
-mixin header(status, nav)
-  header.header
-    .container
+header.header
+  .container.flex
+    .logo
+      a.header-logo(href="#"): img(src="../../logo.svg", alt="Toxin")
+      nav.header-nav(class="flex")
+        ul
+          li.header-nav-item: a.header-nav-link(href="#") О нас

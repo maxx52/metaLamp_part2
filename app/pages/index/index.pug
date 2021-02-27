@@ -5,6 +5,8 @@ block title
 block styles
   link(rel="stylesheet" href="index.sass")
 block content
-  main.index
-    .container
-      h1 Шапка
+  include ../mixins
+
+  include ../../components/header/header
+
+  include ../../components/footer/footer
