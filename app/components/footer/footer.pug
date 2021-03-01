@@ -1,3 +1,36 @@
-footer
-  .container
-    h3 Футер
+footer.footer
+  .main-footer
+    .container
+      .description
+        a.main-footer-logo(href="#"): img(src="../../logo.svg", alt="Toxin")
+        p.main-footer-info Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
+      nav.main-footer-nav
+        ul.footer-nav
+          h3.footer-nav-title Навигация
+          li.footer-nav-item: a.footer-nav-link(href="#") О нас
+          li.footer-nav-item: a.footer-nav-link(href="#") Новости
+          li.footer-nav-item: a.footer-nav-link(href="#") Служба поддержки
+          li.footer-nav-item: a.footer-nav-link(href="#") Услуги
+        ul.footer-nav
+          h3.footer-nav-title О нас
+          li.footer-nav-item: a.footer-nav-link(href="#") О сервисе
+          li.footer-nav-item: a.footer-nav-link(href="#") Наша команда
+          li.footer-nav-item: a.footer-nav-link(href="#") Вакансии
+          li.footer-nav-item: a.footer-nav-link(href="#") Инвесторы
+        ul.footer-nav
+          h3.footer-nav-title Служба поддержки
+          li.footer-nav-item: a.footer-nav-link(href="#") Соглашения
+          li.footer-nav-item: a.footer-nav-link(href="#") Сообщества
+          li.footer-nav-item: a.footer-nav-link(href="#") ВСвязь с нами
+      .main-footer-subscription
+        h3.footer-sub-title Подписка
+        p.footer-subscription-offer Получайте специальные предложения и новости сервиса
+        input.field-default#field-email(type="email" placeholder="Email")
+  .sub-footer
+    .container
+      p.sub-footer-copy Copyright © 2018 Toxin отель. Все права защищены.
+      nav.sub-footer-nav
+        ul.footer-soc
+          li.footer-soc-list: a.footer-soc-link(href="#"): img(src="../../components/footer/img/twitter.svg", alt="Twitter")
+          li.footer-soc-list: a.footer-soc-link(href="#"): img(src="../../components/footer/img/facebook.svg", alt="Facebook")
+          li.footer-soc-list: a.footer-soc-link(href="#"): img(src="../../components/footer/img/instagram.svg", alt="Instagram")

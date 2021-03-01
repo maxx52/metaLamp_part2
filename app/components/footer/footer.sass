@@ -1,2 +1,50 @@
-footer
-  color: #fff
+.footer
+  .main-footer
+    .description
+      width: 260px
+      line-height: 24px
+      margin-right: 40px
+    &-subscription
+      width: 260px
+      line-height: 24px
+      margin-left: 51px
+      &-offer
+        margin:
+          top: 21px
+          bottom: 20px
+    .container
+      padding: 100px 0
+      display: flex
+      justify-content: space-between
+      .main-footer-nav
+        display: flex
+        .footer-nav
+          list-style: none
+          &:nth-child(2)
+            margin: 0 92px 0 58px
+          &-link
+            color: $accent-50
+            line-height: 17px
+          &-item
+            margin-top: 20px
+            display: list-item
+            &:nth-child(2)
+              margin-top: 21px
+  .sub-footer
+    border-top: 1px solid $accent-25
+    padding: 18px 0 23px
+    background: #fff
+    .container
+      display: flex
+      align-items: center
+      justify-content: space-between
+      margin: 0 auto
+    &-copy
+      font-size: 14px
+    &-nav
+      .footer-soc
+        &-list
+          display: inline-block
+          margin-left: 20px
+          &::first-child
+            margin-left: 0
