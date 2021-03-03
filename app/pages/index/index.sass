@@ -1,10 +1,22 @@
 @import "../../sass/main"
 @import "../../components/header/header"
 @import "../../components/footer/footer"
-@import "../../components/field-default/field-default.sass"
+@import "../../components/field-default/field-default"
+@import "../../components/find-room/find-room"
 // @import "../../components/field-expand/field-expand.sass"
 
-main
+.main
   background: $accent-5 url('img/bg.png') no-repeat
-  background-size: cover auto
+  background-size: cover
   background-position: 0 -70px
+  padding-top: 70px
+  padding-bottom: 386px
+  .container
+    position: relative
+    .wishes
+      position: absolute
+      right: -6px
+      bottom: -363px
+      text-align: right
+      width: 297px
+      line-height: 24px

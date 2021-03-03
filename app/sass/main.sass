@@ -39,32 +39,24 @@ html, body
 
 body
 	min-width: 320px
-	max-width: 1920px
+	max-width: 1440px
 	margin: 0 auto
 	position: relative
 	font-family: $default-font
 	overflow-x: hidden
-	color: #1f2041bf
+	color: $accent-75
 	display: flex
-	-webkit-box-orient: vertical
-	-webkit-box-direction: normal
 	flex-direction: column
 	min-height: 100%
+	font-size: 14px
 
-.img-responsive
-	display: block
-	max-width: 100%
-	height: auto
-
-.text-center
-	text-align: center
-
-.flex
-	display: -webkit-flex
-	display: -moz-flex
-	display: -ms-flex
-	display: -o-flex
-	display: flex
+label
+	font-family: $default-font
+	font-size: 12px
+	line-height: 15px
+	text-transform: uppercase
+	font-weight: bold
+	color: $accent
 
 a
 	text-decoration: none
@@ -76,6 +68,7 @@ h1, h2, h3
 img
 	max-width: 100%
 	height: auto
+	display: block
 
 .container
 	max-width: 1160px

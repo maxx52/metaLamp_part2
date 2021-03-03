@@ -15,36 +15,40 @@
     justify-content: space-between
     flex-flow: row wrap
     -webkit-box-pack: justify
+    .header-nav
+      display: flex
+      flex-flow: row wrap
+      ul
+        align-items: center
+        margin-left: auto
+        padding: 0
+        display: flex
+        .header-nav-item
+          display: inline-block
+          margin-right: 20px
+          .header-nav-link
+            color: #1f204180
+            font-size: 14px
+            &:hover
+              color: #1f204140
+        .sub
+          &::after
+            content: ""
+            display: inline-block
+            width: .6429rem
+            height: .6429rem
+            margin-left: .6429rem
+            margin-bottom: -.1429rem
+            border: .1429rem solid rgba(31,32,65,.5)
+            border-top: 0
+            border-left: 0
+            transform: translateY(-50%) rotate(45deg)
 
 .logo
   margin-right: 20px
 
-.header-nav
-  display: flex
-  flex-flow: row wrap
-  z-index: 0
-  ul
-    align-items: center
-    margin-left: auto
-    padding: 0
-    display: flex
-    .header-nav-item
-      display: inline-block
-      margin-right: 20px
-      .header-nav-link
-        color: #1f204180
-        font-size: 14px
-        &:hover
-          color: #1f204140
-    .sub
-      &::after
-        content: ""
-        display: inline-block
-        width: .6429rem
-        height: .6429rem
-        margin-left: .6429rem
-        margin-bottom: -.1429rem
-        border: .1429rem solid rgba(31,32,65,.5)
-        border-top: 0
-        border-left: 0
-        transform: translateY(-50%) rotate(45deg)
+.header-nav-link:not(.btn)
+  color: $accent-50
+
+a[class*="-link"]:hover
+  color: $accent-25

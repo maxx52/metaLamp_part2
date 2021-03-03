@@ -22,16 +22,15 @@ footer.footer
           li.footer-nav-item: a.footer-nav-link(href="#") Соглашения
           li.footer-nav-item: a.footer-nav-link(href="#") Сообщества
           li.footer-nav-item: a.footer-nav-link(href="#") ВСвязь с нами
-      .main-footer-subscription
+      form.main-footer-subscription
         h3.footer-sub-title Подписка
         p.footer-subscription-offer Получайте специальные предложения и новости сервиса
-        .field-arrow
-          input.field-default#field-email(type="email" placeholder="Email")
+        +field('', '', '', 'field-email', true)
   .sub-footer
     .container
       p.sub-footer-copy Copyright © 2018 Toxin отель. Все права защищены.
       nav.sub-footer-nav
         ul.footer-soc
-          li.footer-soc-list: a.footer-soc-link(href="#"): img(src="../../components/footer/img/twitter.svg", alt="Twitter")
-          li.footer-soc-list: a.footer-soc-link(href="#"): img(src="../../components/footer/img/facebook.svg", alt="Facebook")
-          li.footer-soc-list: a.footer-soc-link(href="#"): img(src="../../components/footer/img/instagram.svg", alt="Instagram")
+          li.footer-soc-list: a.footer-soc-link.footer-soc-icon(href="#"): img(src="../../components/footer/img/twitter.svg", alt="Twitter")
+          li.footer-soc-list: a.footer-soc-link.footer-soc-icon(href="#"): img(src="../../components/footer/img/facebook.svg", alt="Facebook")
+          li.footer-soc-list: a.footer-soc-link.footer-soc-icon(href="#"): img(src="../../components/footer/img/instagram.svg", alt="Instagram")
