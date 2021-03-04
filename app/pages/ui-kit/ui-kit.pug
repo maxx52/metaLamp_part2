@@ -27,4 +27,12 @@ block content
           +field-group('t-field', 'date Dropdown', 'arrival', 'date Dropdown', 'checkOut', '', '19.03.2019')(placeholder="ДД.ММ.ГГГГ")
           .t-field
             +field-dropdown('filter date dropdown', 'filterDate')(value="4 мар - 15 мар")
-          +field-arrow('subscription text field', 'subscr')(type="email" placeholder="Email")
+          .t-field
+            +field-arrow('subscription text field', 'subscr')(type="email" placeholder="Email")
+        .buttons
+          .buttons-checkbox
+            h3.checkbox-title Checkbox Buttons
+            .checkbox-example
+              +checkbox('Можно курить', 'smoke')
+              +checkbox('Можно с питомцами', 'pets', 1)
+              +checkbox('Можно пригласить гостей (до 10 человек)', 'guests', 1)
