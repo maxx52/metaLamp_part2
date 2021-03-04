@@ -1,18 +1,6 @@
 @import "../../sass/main.sass"
-@import "../../components/field-default/field-default"
-
-.ui-kit-container
-  max-width: 1200px
-  margin: 0 auto
-  padding: 20px
-  display: -webkit-flex
-  display: -ms-flex
-  display: flex
-  flex-direction: column
-  & > input, div, a
-    margin-top: 20px
-    &:first-child
-      margin-top: 0
+@import "../../components/buttons/buttons"
+@import "colors-type/colors-type"
 
 .field-default
   width: 320px
@@ -26,3 +14,52 @@
     color: $accent-25
   &:hover, &:focus
     border: 1px solid $accent-50
+
+.logo
+  margin-top: 30px
+  margin-bottom: 67px
+  margin-left: 15px
+
+.container
+  display: flex
+  justify-content: space-between
+  padding: 0 15px
+  .fields
+    margin-bottom: 100px
+    .t-field
+      margin-top: 20px
+      position: relative
+      &:first-child
+        margin-top: 0
+      &::after
+        content: ''
+        display: inline-block
+        position: absolute
+        top: 0
+        right: 0
+        text-transform: uppercase
+        font-size: 12px
+        line-height: 15px
+      &:nth-child(1)::after
+        content: 'Default'
+      &:nth-child(2)::after
+        content: 'Hover / Focus'
+      &:nth-child(3)::after
+        content: 'Default'
+      &:nth-child(4)::after
+        content: 'Default'
+      &:nth-child(6)::after
+        width: 266px
+        margin: 40px 0
+    &-group-field
+      margin-top: 20px
+    .field-arrow::after
+      content: url('../../components/footer/img/arrow.svg')
+      display: inline-block
+      width: 44px
+      height: 44px
+      position: absolute
+      top: 33px
+      right: 0
+      text-align: center
+      cursor: pointer
