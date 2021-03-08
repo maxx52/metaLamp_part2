@@ -39,7 +39,8 @@ block content
           .buttons-radio
             h3 Radio buttons
             .radio-example
-              include ../../components/buttons/radio/radio
+              +radio('Мужчина', 'man', 'sex', 'man')
+              +radio('Женщина', 'woman', 'sex', 'woman')
           .buttons-toggle
             h3 Toggle
             .toggle-example
@@ -54,31 +55,23 @@ block content
           .buttons-rate
             h3 Rate Button
             .rate-group
-              +rate(1)
-              +rate(1)
-              +rate(1)
-              +rate(1)
-              +rate()
+              +rating('example', 4, 5)
             .rate-group
-              +rate(1)
-              +rate(1)
-              +rate(1)
-              +rate(1)
-              +rate(1)
+              +rating('example', 5, 5)
           include ../../components/range-slider/range-slider
           .buttons-buttons
             h3 Buttons
             .buttons-gradient 
-              +button('btn-gradient', 'Click Me')(href="#")
-              +button('btn-gradient', 'Click Me')(href="#")
+              +btn-gradient('btn-example', 'Click Me')
+              +btn-gradient('btn-example', 'Click Me')
             .buttons-not-gradient
-              +button('btn-not-gradient', 'Click Me')(href="#")
-              +button('btn-not-gradient', 'Click Me')(href="#")
+              +btn-not-gradient('btn-example', 'Click Me')
+              +btn-not-gradient('btn-example', 'Click Me')
             .buttons-links
-              a.default-link(href="#!") Click Me
-              a.default-link(href="#!") Click Me
+              +link('link-example', 'Click Me')
+              +link('link-example', 'Click Me')
             .buttons-arrow
-              +button('btn-gradient btn-arrow find-room-btn', 'Перейти к оплате')(href="#!")
+              +btn-arrow('btn-example', 'Перейти к оплате')
           .buttons-pagination 
             h3 Pagination
             include ../../components/pagination/pagination
