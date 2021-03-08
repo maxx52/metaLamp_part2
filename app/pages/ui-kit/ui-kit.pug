@@ -66,3 +66,16 @@ block content
               +rate(1)
               +rate(1)
           include ../../components/range-slider/range-slider
+          .buttons-buttons
+            h3 Buttons
+            .buttons-gradient 
+              +button('btn-gradient', 'Click Me')(href="#")
+              +button('btn-gradient', 'Click Me')(href="#")
+            .buttons-not-gradient
+              +button('btn-not-gradient', 'Click Me')(href="#")
+              +button('btn-not-gradient', 'Click Me')(href="#")
+            .buttons-links
+              a.default-link(href="#!") Click Me
+              a.default-link(href="#!") Click Me
+            .buttons-arrow
+              +button('btn-gradient btn-arrow find-room-btn', 'Перейти к оплате')(href="#!")
