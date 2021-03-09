@@ -28,3 +28,17 @@ mixin field-group(classes, text1, id1, text2, id2, value1, value2)
       +field-dropdown(text1, id1, value1)&attributes(attributes)
     div(class=classes + '-item')
       +field-dropdown(text2, id2, value2)&attributes(attributes)
+
+mixin field-dropdown(text, id, value)
+  label(for=id class="label-cap")= text
+  input(class="field-default field-default-dropdown " id=id, value=value)&attributes(attributes)
+  div(class="dropdown-content")
+    span.dropdown-item
+      span.dropdown-target спальни
+      span.dropdown-value 2
+    span.dropdown-item
+      span.dropdown-target кровати
+      span.dropdown-value 2
+    span.dropdown-item
+      span.dropdown-target ванные комнаты
+      span.dropdown-value.dropdown-value-zero 0

@@ -68,3 +68,82 @@ div[class$='group-field']
     border-left: 0
     transform: translateY(-50%) rotate(45deg)
     cursor: pointer
+
+// Dropdown
+
+.dropdown-content
+  width: 100%
+  border: 1px solid $accent-50
+  border-top: none
+  border-radius: 2px
+  padding: 13px 15px
+  position: absolute
+  bottom: -116px
+  display: none
+  background-color: #fff
+  z-index: 9
+
+.t-field:hover
+  .dropdown-content
+    display: block
+    border-top-right-radius: 0
+    border-top-left-radius: 0
+  .field-default
+    border: 1px solid $accent-50
+    border-bottom-right-radius: 0
+    border-bottom-left-radius: 0
+
+.dropdown-item
+  text-transform: uppercase
+  font-size: 12px
+  line-height: 15px
+  font-weight: bold
+  color: $accent
+  display: flex
+  justify-content: space-between
+  align-items: center
+  margin-top: 22px
+  &:first-child
+    margin-top: 0
+
+.dropdown-value
+  padding-right: 40px
+  position: relative
+  &::after
+    content: '+'
+    width: 30px
+    height: 30px
+    display: inline-block
+    border: 1px solid $accent-50
+    border-radius: 50%
+    text-align: center
+    position: absolute
+    font-size: 18px
+    color: $accent-50
+    right: 0
+    top: -7px
+    line-height: 28px
+    font-weight: normal
+    cursor: pointer
+  &::before
+    content: '-'
+    width: 30px
+    height: 30px
+    display: inline-block
+    border: 1px solid $accent-50
+    border-radius: 50%
+    text-align: center
+    position: absolute
+    font-size: 18px
+    color: $accent-50
+    left: -40px
+    top: -7px
+    line-height: 28px
+    font-weight: normal
+    cursor: pointer
+
+.dropdown-value-zero
+  &::before
+    border: 1px solid $accent-25
+    color: $accent-25
+    cursor: default
