@@ -75,3 +75,21 @@ block content
           .buttons-pagination 
             h3 Pagination
             include ../../components/pagination/pagination
+
+      .form-elements-expandable
+        .container
+          .fields 
+            .t-field
+              +field-dropdown('Dropdown', 'dropdown')(value="2 спальни, 2 кровати...")
+            .checkbox-expandable
+              h3.checkbox-title expandable checkbox list
+              .checkbox-example-expandable
+                +checkbox('Можно курить', 'smoke')
+                +checkbox('Можно с питомцами', 'pets', 1)
+                +checkbox('Можно пригласить гостей (до 10 человек)', 'guests', 1)
+
+    .rooms-filter
+      .container
+        .rooms-filter-wrapper
+          .t-field.rooms-filter-date
+            +field-dropdown('даты пребывания в отеле', 'roomsFilterDate')(value="19 авг - 23 авг")
