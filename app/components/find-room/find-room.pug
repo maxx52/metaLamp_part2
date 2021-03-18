@@ -1,7 +1,26 @@
 .find-room
   h1.find-room-title Найдём номера под ваши пожелания
-  form.find-room-form
+  form.find-room-form.datepicker-place
     +field-group('find-room', 'Прибытие', 'find-room-form', 'Выезд', 'find-room-to')(value="ДД.ММ.ГГГГ" autocomplete="off" readonly)
     .find-room-item.find-room-guests
       +field-dropdown('Гости', 'guests')(value="Сколько гостей" readonly)
+      .dropdown-content#guestDrop
+        span.dropdown-item
+          span.dropdown-target Взрослые
+          a.dropdown-btn.dropdown-btn-minus(href="#") -
+          span.dropdown-value 0
+          a.dropdown-btn.dropdown-btn-plus(href="#") +
+        span.dropdown-item
+          span.dropdown-target Дети
+          a.dropdown-btn.dropdown-btn-minus(href="#") -
+          span.dropdown-value 0
+          a.dropdown-btn.dropdown-btn-plus(href="#") +
+        span.dropdown-item#guestDropPrimeItem
+          span.dropdown-target Младенцы
+          a.dropdown-btn.dropdown-btn-minus(href="#") -
+          span.dropdown-value#guestDropPrimeItemValue 0
+          a.dropdown-btn.dropdown-btn-plus(href="#") +
+        .dropdown-funtions
+          a.dropdown-funtions-btn.dropdown-clear(href="#") Очистить
+          a.dropdown-funtions-btn.dropdown-apply(href="#") Применить
     +btn-arrow('find-room-btn', 'Подобрать номер')

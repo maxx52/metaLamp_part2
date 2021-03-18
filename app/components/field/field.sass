@@ -71,23 +71,31 @@ div[class$='group-field']
   width: 100%
   border: 1px solid $accent-50
   border-top: none
-  border-radius: 2px
-  padding: 13px 15px
+  border-radius: 4px
+  padding: 7px 7px 13px 15px
   position: absolute
-  bottom: -116px
-  display: none
   background-color: #fff
-  z-index: 9
+  z-index: 1
+  opacity: 0
+  max-height: 0
+  overflow: hidden
+  left: 100000px
+  transition: opacity .3s, max-height .3s
 
-.t-field:hover
-  .dropdown-content
-    display: block
-    border-top-right-radius: 0
-    border-top-left-radius: 0
-  .field-default
-    border: 1px solid $accent-50
-    border-bottom-right-radius: 0
-    border-bottom-left-radius: 0
+.dropdown-content-active
+  max-height: 300px
+  left: auto
+  opacity: 1
+  border-top-right-radius: 0
+  border-top-left-radius: 0
+
+.field-default-active
+  border: 1px solid $accent-50
+  border-bottom-right-radius: 0
+  border-bottom-left-radius: 0
+
+.find-room-item
+  position: relative
 
 .dropdown-item
   text-transform: uppercase
@@ -98,48 +106,64 @@ div[class$='group-field']
   display: flex
   justify-content: space-between
   align-items: center
-  margin-top: 22px
+  margin-top: 20px
   &:first-child
-    margin-top: 0
+    margin-top: 5px
+  &:last-child
+    margin-bottom: 20px
+
+.dropdown-btn
+  position: absolute
+  width: 30px
+  height: 30px
+  border-radius: 50%
+  background: #fff
+  border: 1px solid $accent-50
+  color: $accent-50
+  text-align: center
+  line-height: 29px
+  font-size: 18px
+  font-weight: 100
+  transition: .25s ease
+  &:active
+    background-color: $purple
+    transition: .25s ease
+    color: #fff
+    border: none
+    font-weight: bold
+
+.dropdown-btn-minus
+  right: 62px
+
+.dropdown-btn-plus
+  right: 0
 
 .dropdown-value
-  padding-right: 40px
-  position: relative
-  &::after
-    content: '+'
-    width: 30px
-    height: 30px
-    display: inline-block
-    border: 1px solid $accent-50
-    border-radius: 50%
-    text-align: center
-    position: absolute
-    font-size: 18px
-    color: $accent-50
-    right: 0
-    top: -7px
-    line-height: 28px
-    font-weight: normal
-    cursor: pointer
-  &::before
-    content: '-'
-    width: 30px
-    height: 30px
-    display: inline-block
-    border: 1px solid $accent-50
-    border-radius: 50%
-    text-align: center
-    position: absolute
-    font-size: 18px
-    color: $accent-50
-    left: -40px
-    top: -7px
-    line-height: 28px
-    font-weight: normal
-    cursor: pointer
+  margin-right: 42px
 
-.dropdown-value-zero
-  &::before
-    border: 1px solid $accent-25
-    color: $accent-25
-    cursor: default
+.dropdown-btn-disable
+  border: 1px solid $accent-25
+  cursor: default
+  pointer-events: none
+
+.dropdown-functions
+  margin-top: 30px
+  display: flex
+  align-items: center
+  justify-content: space-between
+
+.dropdown-functions-btn
+  text-transform: uppercase
+  font-weight: bold
+  font-size: 12px
+  line-height: 15px
+
+.dropdown-clear
+  color: $accent-50
+  &:hover
+    color: lighten($accent-50, 30%)
+
+.dropdown-apply
+  color: $purple
+  &:hover
+    color: lighten($purple, 5%)
