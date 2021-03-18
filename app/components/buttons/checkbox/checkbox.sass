@@ -1,5 +1,5 @@
 .checkbox
-  line-height: 23px
+  line-height: 25px
   color: $accent-50
   input[type="checkbox"]
     opacity: 0
@@ -17,7 +17,7 @@
     &::before
       height: 20px
       width: 20px
-      border: 1px solid $purple
+      border: 1px solid $accent-25
       border-radius: 4px
       left: 0px
       top: 2px
@@ -34,5 +34,60 @@
       content: none
     &:checked + label::after
       content: ""
+    &:checked + label::before
+      border: 1px solid $purple
     &:focus + label::before
       outline: none
+
+.checkbox-wrapper-rich
+  margin-bottom: 10px
+  &:last-child
+    margin-bottom: 0
+
+.checkbox-title-rich
+  color: $accent-75
+  font-weight: bold
+  width: 100%
+
+.checkbox-text-rich
+  font-size: 12px
+  line-height: 14px
+  margin-top: -5px
+  font-weight: 100
+  margin-top: 2px
+  color: $accent-50
+  width: 230px
+
+.checkbox-title-expandable
+  position: relative
+  cursor: pointer
+  padding-bottom: 18px
+  &::after
+    content: ''
+    display: inline-block
+    position: absolute
+    right: 0
+    top: 4px
+    width: 9px
+    height: 9px
+    border: 2px solid $accent-50
+    border-top: 0
+    border-left: 0
+    transform: translateY(-50%) rotate(45deg)
+
+.checkbox-wrapper-expandable
+  opacity: 0
+  max-height: 0
+  overflow: hidden
+  left: 100000px
+  transition: opacity .3s, min-height .3s
+
+.checkbox-wrapper-expandable-active
+  min-height: 1000px
+  left: auto
+  opacity: 1
+
+.checkbox-title-expandable-active
+  transition: .3s
+  &::after
+    transform: translateY(0%) rotate(-135deg)

@@ -7,3 +7,9 @@ mixin checkbox(text, id, checked)
     .checkbox
       input(id=id type='checkbox')
       label(for=id)= text
+
+mixin checkbox-rich(title, text, id)
+  .checkbox.checkbox-wrapper-rich
+    input(type="checkbox" id=id)
+    label(for=id class="checkbox-title-rich")= title
+      p(class="checkbox-text-rich")= text
