@@ -1,0 +1,16 @@
+extends ../template
+
+block title
+
+block styles 
+
+block content
+  include ../mixins
+  include ../../components/header/header
+
+  main.main
+
+  include ../../components/footer/footer
+
+  script(src="../../components/calendar/datepicker.js")
+  script(src="rooms.js")
