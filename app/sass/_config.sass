@@ -47,12 +47,16 @@ body
 	font-size: $fontsize
 	color: $accent
 	min-width: 320px
+	max-width: 1990px
 	position: relative
 	overflow-x: hidden
 	margin: auto
 
-.container
+.container, .container-flex
 	margin: 0 140px
+
+.container-flex
+	display: flex
 
 h3
 	font-size: 24px
@@ -69,3 +73,21 @@ h3
 	font-weight: bold
 	text-decoration: none
 	text-align: center
+
+.arrow-send
+	position: relative
+	width: 100%
+	padding: 15px 22px
+	display: inline-block
+	vertical-align: middle
+	box-sizing: border-box
+	&::after
+		content: ''
+		background-image: url('../../components/buttons/arrow.svg')
+		background-repeat: no-repeat
+		background-position: center
+		width: 44px
+		height: 44px
+		position: absolute
+		right: 0
+		top: 2px

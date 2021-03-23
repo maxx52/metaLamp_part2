@@ -1,0 +1,17 @@
+block styles
+	link(rel="stylesheet", href="find-room.sass")
+
+main.main
+	.booking-form
+		form
+			h3 Найдём номера под ваши пожелания
+			.arrival-block
+				label(for="arrival") Прибытие
+					input.arrival(type="text" value="ДД.ММ.ГГГГ")
+				label(for="arrival") Выезд
+					input.arrival(type="text" value="ДД.ММ.ГГГГ")
+			.guests-block
+				label(for="guests") Гости
+				input.guests(type="text" value="Сколько гостей")
+			a.btn.arrow-send(href="#") Подобрать номер
+		p Лучшие номера для вашей работы, отдыха и просто вдохновения
