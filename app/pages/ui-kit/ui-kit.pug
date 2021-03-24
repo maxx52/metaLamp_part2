@@ -1,5 +1,3 @@
-include ../mixins
-
 block title
 	title Отель "Toxin" | Компоненты
 
@@ -8,17 +6,38 @@ block styles
 	link(rel="stylesheet", href="ui-kit.sass")
 
 block content
-	include mixins
 	.logo
 		img(src="../../components/logo-m.svg", alt="Toxin")
-	.container
-		block colors
-			.colors
-				ul.colors-list
+	.container-flex
+		.colors
+			ul.colors-list
+				-
+					let text= [
+						{text: 'Dark Shade 100%', code: '#1F2041'},
+						{text: 'Dark Shade 75%', code: '#1F2041'},
+						{text: 'Dark Shade 50%', code: '#1F2041'},
+						{text: 'Dark Shade 25%', code: '#1F2041'},
+						{text: 'Dark Shade 5%', code: '#1F2041'},
+						{text: 'Purple', code: '#BC9CFF'},
+						{text: 'Green', code: '#6FCF97'}
+					];
+				each element, n in text
 					li.colors-list-item
-						.colors-box
+						div(class="colors-box-" + n, style="width: 70px; height: 70px;border-radius: 6px; margin-bottom: 20px")
 						.colors-title
-							p.colors-title-description
-							p.colors-title-code
-		block type
+							span.colors-title-description #{element.text}
+							span.colors-title-code #{element.code}
 
+		.type
+			ul.type-list
+				-
+					let type= [
+						{h: 'H1', text: 'This one is the sub-section or widget title'},
+						{h: 'H2', text: 'Next one is the item title inside widgets'},
+						{h: 'H3', text: 'This is a label or CTA text'},
+						{h: 'Body', text: 'This is the body text which is used for most of the design, like paragraphs, lists, etc.'}
+					]
+				each el, i in type
+					li.type-list-item
+						span(class="type-box-" + i, style="color: rgba(31, 32, 65, 0.25); margin-right: 30px; text-align: right; min-width: 50px; margin-bottom: 51px") #{el.h}
+						span(class="type-title-" + i) #{el.text}
