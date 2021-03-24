@@ -12,18 +12,17 @@
 			height: 40px
 			margin: 15px 0 15px 205px
 			display: flex
-			ul
+			.nav-list
 				margin: 0
 				padding: 0
 				display: flex
 				align-items: center
-				.nav-list-item
+				li
 					position: relative
 					text-align: right
 					list-style-type: none
 					line-height: 17px
 					margin-right: 20px
-					color: $accent50
 					font-size: 14px
 					min-width: 45px
 					&:nth-child(2)::after, &:last-child::after
@@ -38,6 +37,10 @@
 						transform: rotate(-45deg)
 					&:nth-child(2)
 						margin-right: 20px
+					.nav-list-item
+						text-decoration: none
+						color: $accent50
+
 		.sign
 			display: flex
 			justify-content: space-between

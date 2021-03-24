@@ -1,0 +1,24 @@
+include ../mixins
+
+block title
+	title Отель "Toxin" | Компоненты
+
+block styles
+	link(rel="stylesheet", href="https://fonts.googleapis.com/icon?family=Material+Icons")
+	link(rel="stylesheet", href="ui-kit.sass")
+
+block content
+	include mixins
+	.logo
+		img(src="../../components/logo-m.svg", alt="Toxin")
+	.container
+		block colors
+			.colors
+				ul.colors-list
+					li.colors-list-item
+						.colors-box
+						.colors-title
+							p.colors-title-description
+							p.colors-title-code
+		block type
+

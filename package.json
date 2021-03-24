@@ -1,14 +1,14 @@
 {
   "name": "toxin",
   "version": "1.0.0",
-  "description": "toxin hotel, fsd 2 step",
+  "description": "toxin hotel, metaLamp 2 step",
   "main": "app/pages/index/index.pug",
   "scripts": {
     "dev": "rimraf dist && parcel app/pages/index/index.pug --open",
     "build": "rimraf dist docs && parcel build app/pages/index/index.pug -d docs --no-cache --public-url /Toxin/"
   },
   "keywords": [],
-  "author": "skinnynpale",
+  "author": "maxx52.ru",
   "license": "ISC",
   "devDependencies": {
     "@parcel/transformer-pug": "^2.0.0-beta.2",

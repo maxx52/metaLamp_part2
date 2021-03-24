@@ -5,7 +5,7 @@ header.header
     nav.site-nav
       ul.nav-list
         each text in ['UI kit', 'О нас', 'Услуги', 'Вакансии', 'Новости', 'Соглашения']
-          li.nav-list-item= text
+          li: a.nav-list-item(href="#")= text
     .sign
       a.sign-in(href="#") Войти
       a.sign-up(href="#") Зарегистрироваться
