@@ -9,17 +9,17 @@ footer.main-footer
 				h5 Навигация
 				ul.footer-nav-list
 					each text in ['О нас', 'Новости', 'Служба поддержки', 'Услуги']
-						li.footer-nav-list-item= text
+						li: a.footer-nav-list-item(href="#")= text
 			.main-footer-navigation-item
 				h5 О нас
 				ul.footer-nav-list
 					each text in ['О сервисе', 'Наша команда', 'Вакансии', 'Инвесторы']
-						li.footer-nav-list-item= text
+						li: a.footer-nav-list-item(href="#")= text
 			.main-footer-navigation-item
 				h5 Служба поддержки
 				ul.footer-nav-list
 					each text in ['Соглашения', 'Сообщества', 'Связь с нами']
-						li.footer-nav-list-item= text
+						li: a.footer-nav-list-item(href="#")= text
 			.main-footer-navigation-item
 				h5 Подписка
 				p.footer-nav-title Получайте специальные предложения и новости сервиса

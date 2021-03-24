@@ -1,6 +1,5 @@
 .main-footer
 	.container-flex
-		display: flex
 		justify-content: space-between
 		align-items: center
 		height: 372px
@@ -26,11 +25,13 @@
 				.footer-nav-list
 					margin: 0
 					padding: 0
-					&-item
+					li
 						list-style-type: none
 						line-height: 17px
-						color: $accent50
 						margin-bottom: 20px
+						.footer-nav-list-item
+							text-decoration: none
+							color: $accent50
 				&:last-child
 					max-width: 260px
 				.footer-nav-title
