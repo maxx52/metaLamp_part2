@@ -41,3 +41,66 @@ block content
 					li.type-list-item
 						span(class="type-box-" + i, style="color: rgba(31, 32, 65, 0.25); margin-right: 30px; text-align: right; min-width: 50px; margin-bottom: 51px") #{el.h}
 						span(class="type-title-" + i) #{el.text}
+	
+	.logo-1
+		img(src="../../components/logo-m.svg", alt="Toxin")
+	.container-flex
+		.column
+			.text-field
+				label.label-field Text field
+					input.default-field(value="Email" type="email")
+				span.field-title Default
+			.text-field
+				label.label-field Text field
+					span.field-title Hover / Focus
+					input.default-field.hover(value="This is pretty awesome" type="text")
+			.text-field
+				label.label-field Dropdown
+					input.dropdown-field(value="Сколько гостей" type="text" readonly)
+					span(class="material-icons") expand_more
+			.text-field
+				label.label-field Masked text field
+					input.dropdown-field(value="ДД.ММ.ГГГГ" type="text" readonly)
+			.text-field
+				label.label-field(for="arrival") Date Dropdown
+					span(class="material-icons") expand_more
+					input.arrival(value="ДД.ММ.ГГГГ" readonly)
+				label.label-field(for="arrival") Date Dropdown
+					span(class="material-icons") expand_more
+					input.arrival(value="19.08.2019" readonly)
+			.text-field
+				label.label-field(for="date-field") Filter date dropdown
+					input.date-filter(value="19 авг - 23 авг")
+					span(class="material-icons") expand_more
+			.text-field
+				label.label-field(for="subscribe") subscription text field
+					input.subscribe.arrow-send(value="Email" type="email")
+		.column
+			.checkbox-buttons
+				label.label-check Checkbox Buttons
+				span Можно курить
+					input.checkbox-btn(type="checkbox")
+				span Можно с питомцами
+					input.checkbox-btn(type="checkbox")
+				span Можно пригласить гостей (до 10 человек)
+					input.checkbox-btn(type="checkbox")
+			.radio-buttons
+				label.label-radio Radio buttons
+					.radio
+						span Мужчина
+							input.radio-btn(type="radio" name="radio")
+						span Женщина
+							input.radio-btn(type="radio" name="radio")
+			.toggle-buttons
+				label.label-toggle Toggle
+					span Получать спецпредложения
+						input.toggle-check(type="checkbox" name="toggle")
+					span Получать спецпредложения
+						input.toggle-check(type="checkbox" name="toggle")
+			.like-buttons
+				label.label-like Like button
+					span.like-btn
+						input(type="button")
+					span.like-btn
+						input(type="button")
+		.column
