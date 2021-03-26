@@ -256,4 +256,14 @@
 								color: $purple
 						input
 							display: none
-				
+		.rate-buttons
+			margin-top: 40px
+			.label
+				text-transform: uppercase
+				font-weight: 700
+				.star-rating
+					margin-top: 16px
+					&__wrap
+						overflow: hidden
+						&:not(:checked) > .star-rating__input
+							display: none

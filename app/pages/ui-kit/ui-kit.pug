@@ -108,4 +108,14 @@ block content
 							span.material-icons favorite
 							span.digit 12
 							input(type="button")
+			.rate-buttons
+				label.label Rate button
+					.star-rating
+						.star-rating__wrap
+							each el in ['5', '4', '3', '2', '1']
+								input.star-rating__input(type="radio", name="rating", value=el, id="star-rating-" + el)
+								label.star-rating__ico.material-icons.md-24(for="star-rating-" + el) star_rate
+							each el in ['5', '4', '3', '2', '1']
+								input.star-rating__input(type="radio", name="rating", value=el, id="star-rating-" + el)
+								label.star-rating__ico.material-icons.md-24(for="star-rating-" + el) star_rate
 		.column
