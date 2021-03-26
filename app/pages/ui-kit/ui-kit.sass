@@ -302,4 +302,30 @@
 						left: -12px
 					&::after
 						right: -12px
-
+		.buttons-btn
+			margin-top: 45px
+			margin-bottom: 16px
+			.buttons-gradient, .buttons-not-gradient
+				display: flex
+				justify-content: space-between
+				margin-top: 16px
+			.buttons-gradient, .buttons-not-gradient
+				> a
+					padding: 14px 21px 15px 19px
+					border-radius: 22px
+				.btn-gradient
+					background: linear-gradient(180deg, $purple 0%, #8BA4F9 100%)
+					color: #fff
+					&__active
+						background: linear-gradient(180deg, $purple 0%, #8BA4F9 100%)
+						color: #fff
+						opacity: .5
+			.buttons-not-gradient
+				> a
+					border: 2px solid
+					padding: 13px 19px 14px 19px
+				.btn-not-gradient
+					border: 2px solid
+					color: $purple
+					&__active
+						opacity: .5
