@@ -219,5 +219,41 @@
 						display: none
 		.like-buttons
 			margin-top: 45px
-			text-transform: uppercase
-			font-weight: 700
+			.label-like
+				text-transform: uppercase
+				font-weight: 700
+				display: block
+				.block-btn
+					display: flex
+					justify-content: flex-start
+					.like-btn
+						width: 40px
+						height: 20px
+						border: 1px solid $accent25
+						border-radius: 10px
+						display: inline-block
+						margin-top: 16px
+						margin-right: 10px
+						&:nth-child(2)
+							border: 1px solid $purple
+						.material-icons
+							width: 20px
+							height: 20px
+							font-size: 10px
+							line-height: 8.5px
+							text-align: center
+							margin-top: 6px
+							color: $accent25
+							&:nth-child(2)
+								color: $purple
+						.digit
+							font-size: 10px
+							line-height: 12px
+							color: $accent25
+							display: inline-block
+							&:nth-child(2)
+								font-weight: 400
+								color: $purple
+						input
+							display: none
+				
