@@ -3,6 +3,13 @@
 .logo
 	margin: 30px
 
+.logo-1
+	margin: 30px
+
+.label
+	text-transform: uppercase
+	font-weight: 700
+
 .container-flex
 	margin: 0 150px
 	justify-content: space-between
@@ -72,9 +79,6 @@
 					color: $accent25
 				.type-title-3
 					color: $accent75
-
-.logo-1
-	margin: 30px
 
 .container-flex
 	justify-content: space-between
@@ -267,3 +271,35 @@
 						overflow: hidden
 						&:not(:checked) > .star-rating__input
 							display: none
+		
+		.range-slider
+			&-price
+				font-size: 12px
+				line-height: 15px
+				color: $accent50
+				float: right
+			&__body
+				width: 266px
+				height: 6px
+				border: 1px solid $accent25
+				margin-top: 23px
+				border-radius: 3px
+				.range-slider__active
+					width: 88px
+					height: 6px
+					background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%)
+					margin: auto
+					position: relative
+					&::before, &::after
+						content: ''
+						width: 12px
+						height: 12px
+						background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%)
+						position: absolute
+						border-radius: 10px
+						top: -3px
+					&::before
+						left: -12px
+					&::after
+						right: -12px
+
