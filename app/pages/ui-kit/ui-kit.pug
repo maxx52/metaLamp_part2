@@ -174,3 +174,17 @@ block content
 							div
 								input.checkbox-item__input(type="checkbox", name="check", id="cb" + i)
 								label.checkbox-span #{text}
+		.column
+			.dropdown
+				.dropdown-default
+					label.label Dropdown
+						input.dropdown-default__input(type="text" value="2 спальни, 2 кровати...")
+						span.material-icons expand_more
+						.dropdown-expand
+							span.dropdown-expand__item Взрослые
+								span.dropdown-expand__value 0
+							span.dropdown-expand__item Дети
+								span.dropdown-expand__value 0
+							span.dropdown-expand__item Младенцы
+								span.dropdown-expand__value 0
+							a.btn-simple-purple(href="#") Применить
