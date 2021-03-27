@@ -166,3 +166,11 @@ block content
 				.expandable-checkbox-list
 					h4.label Expandable checkbox list
 					span.material-icons expand_more
+				.expandable-checkbox-list
+					h4.label Expandable checkbox list
+					span.material-icons expand_less
+					.expand-checkbox
+						each text, i in ['Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь']
+							div
+								input.checkbox-item__input(type="checkbox", name="check", id="cb" + i)
+								label.checkbox-span #{text}

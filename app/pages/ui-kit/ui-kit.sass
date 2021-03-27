@@ -426,6 +426,8 @@
 						height: 44px
 						margin-top: 5px
 						border-radius: 2px
+						margin-bottom: 0
+						padding: 12px 0 8px 15px
 					.material-icons
 						position: absolute
 						width: 44px
@@ -445,12 +447,14 @@
 				.dropdown-expand
 					height: 119px
 					border: 1px solid $accent50
+					border-top: 0
 					border-radius: 2px
+					margin: 0
 					&__item
 						font-size: 12px
 						display: flex
 						justify-content: space-between
-						margin: 13px 0 22px 15px
+						padding: 10px 0 11px 15px
 						.dropdown-expand__value
 							width: 92px
 							text-align: center
@@ -476,9 +480,51 @@
 								top: -5px
 								border-radius: 22px
 		.expandable-checkbox-list
-			display: flex
-			justify-content: space-between
-			align-items: center
+			display: inline-block
 			margin-top: 54px
+			position: relative
+			.material-icons
+				position: absolute
+				right: -30px
+				top: -3px
 			.label
 				margin: 0
+			.expand-checkbox
+				display: flex
+				flex-direction: column
+			input[type="checkbox"]:checked, input[type="checkbox"]:not(:checked)
+				position: absolute
+				left: -9999px
+			input[type="checkbox"]:checked + label, input[type="checkbox"]:not(:checked) + label
+				display: inline-block
+				position: relative
+				cursor: pointer
+				padding-left: 30px
+				margin: 5px 0
+			input[type="checkbox"]:checked + label:before, input[type="checkbox"]:not(:checked) + label:before
+				content: ''
+				position: absolute
+				left: 0
+				top: 0
+				width: 20px
+				height: 20px
+				border: 1px solid $accent50
+				border-radius: 4px
+			input[type="checkbox"]:checked + label:after, input[type="checkbox"]:not(:checked) + label:after
+				content: ''
+				position: absolute
+				transition: all .25s ease
+			input[type="checkbox"]:checked + label:after, input[type="checkbox"]:not(:checked) + label:after
+				left: 6px
+				top: 5px
+				width: 8px
+				height: 6px
+				border: 1px solid
+				border: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
+				border-top: 0
+				border-right: 0
+				transform: rotate(-45deg)
+			input[type="checkbox"]:not(:checked) + label:after, input[type="radio"]:not(:checked) + label:after
+				opacity: 0
+			input[type="checkbox"]:checked + label:after, input[type="radio"]:checked + label:after
+				opacity: 1
