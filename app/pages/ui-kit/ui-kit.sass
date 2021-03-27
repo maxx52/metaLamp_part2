@@ -329,3 +329,42 @@
 					color: $purple
 					&__active
 						opacity: .5
+			.buttons-simple
+				margin-top: 31px
+				text-transform: uppercase
+				font-size: 12px
+				font-weight: 700
+				line-height: 15px
+				.btn-simple-purple, .btn-simple
+					text-decoration: none
+					margin-right: 20px
+				.btn-simple-purple
+					color: $purple
+				.btn-simple
+					color: $accent50
+			.button-arrow
+				margin-top: 30px
+				text-align: center
+				.arrow-btn
+					padding: 15px 20px
+					color: #fff
+					text-transform: uppercase
+					text-decoration: none
+					background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
+					font-size: 12px
+					font-weight: 700
+					width: 320px
+					display: block
+					border-radius: 22px
+					position: relative
+					&::after
+						content: ''
+						width: 44px
+						height: 44px
+						background-image: url('../../components/buttons/arrow.svg')
+						background-repeat: no-repeat
+						display: block
+						position: absolute
+						right: 0
+						top: 15px
+						text-align: center
