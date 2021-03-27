@@ -368,3 +368,40 @@
 						right: 0
 						top: 15px
 						text-align: center
+		.pagination
+			margin-top: 40px
+			display: block
+			&-list
+				display: flex
+				align-items: center
+				padding: 0
+				margin: 0
+				&-item
+					display: block
+					width: 40px
+					height: 40px
+					text-align: center
+					&:first-child
+						background: linear-gradient(180deg, $purple 0%, #8BA4F9 100%)
+						border-radius: 22px
+						> a
+							color: #fff
+					&:last-child
+						color: #fff
+						background: linear-gradient(180deg, $green 0%, #66D2EA 100%)
+						border-radius: 22px
+						> span
+							display: inline
+							position: relative
+							top: 7px
+					.pagination-list-link
+						text-decoration: none
+						text-align: center
+						color: $accent25
+						font-size: 12px
+						position: relative
+						top: 10px
+			&-title
+				color: $accent75
+				font-size: 14px
+				line-height: 24px

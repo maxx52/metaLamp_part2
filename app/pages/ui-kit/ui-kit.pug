@@ -137,3 +137,10 @@ block content
 					a.btn-simple(href="#") Click me
 				.button-arrow
 					a.arrow-btn(href="#") Перейти к оплате
+			.pagination
+				h4.label Pagination
+				ul.pagination-list
+					each num in ['1', '2', '3', '...', '15']
+						li.pagination-list-item: a.pagination-list-link(href="#") #{num}
+					li.pagination-list-item: span.material-icons arrow_forward
+				p.pagination-title 1 – 12 из 100+ вариантов аренды
