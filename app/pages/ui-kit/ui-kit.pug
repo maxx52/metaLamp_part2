@@ -144,3 +144,25 @@ block content
 						li.pagination-list-item: a.pagination-list-link(href="#") #{num}
 					li.pagination-list-item: span.material-icons arrow_forward
 				p.pagination-title 1 – 12 из 100+ вариантов аренды
+		.column
+			.dropdown
+				.dropdown-default
+					label.label Dropdown
+						input.dropdown-default__input(type="text" value="2 спальни, 2 кровати...")
+						span.material-icons expand_more
+						span.dropdown-title Default
+				.dropdown-default
+					label.label Dropdown
+						input.dropdown-default__input(type="text" value="2 спальни, 2 кровати...")
+						span.material-icons expand_more
+						span.dropdown-title Expanded
+						.dropdown-expand
+							span.dropdown-expand__item Спальни
+								span.dropdown-expand__value 2
+							span.dropdown-expand__item Кровати
+								span.dropdown-expand__value 2
+							span.dropdown-expand__item Ванные комнаты
+								span.dropdown-expand__value 0
+				.expandable-checkbox-list
+					h4.label Expandable checkbox list
+					span.material-icons expand_more

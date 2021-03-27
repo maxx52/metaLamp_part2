@@ -82,9 +82,14 @@
 
 .container-flex
 	justify-content: space-between
+	flex-wrap: wrap
+	position: relative
 	.column
 		margin-top: 85px
 		max-width: 320px
+		min-width: 260px
+		width: 100%
+		outline: none
 		.text-field
 			display: flex
 			justify-content: space-between
@@ -405,3 +410,75 @@
 				color: $accent75
 				font-size: 14px
 				line-height: 24px
+
+		.dropdown
+			&-default
+				display: flex
+				justify-content: space-between
+				margin-bottom: 20px
+				.label
+					width: 100%
+					position: relative
+					.dropdown-default__input
+						display: flex
+						align-items: center
+						width: 100%
+						height: 44px
+						margin-top: 5px
+						border-radius: 2px
+					.material-icons
+						position: absolute
+						width: 44px
+						height: 44px
+						text-align: center
+						right: 0
+						top: 36px
+						box-sizing: border-box
+						display: block
+				.dropdown-title
+					position: absolute
+					right: 0
+					top: 0
+					font-weight: 400
+					color: $accent50
+					font-size: 12px
+				.dropdown-expand
+					height: 119px
+					border: 1px solid $accent50
+					border-radius: 2px
+					&__item
+						font-size: 12px
+						display: flex
+						justify-content: space-between
+						margin: 13px 0 22px 15px
+						.dropdown-expand__value
+							width: 92px
+							text-align: center
+							position: relative
+							display: flex
+							justify-content: space-around
+							&::before
+								content: '-'
+								width: 30px
+								height: 30px
+								border: 1px solid $accent25
+								position: absolute
+								left: 0
+								top: -5px
+								border-radius: 22px
+							&::after
+								content: '+'
+								width: 30px
+								height: 30px
+								border: 1px solid $accent25
+								position: absolute
+								right: 5px
+								top: -5px
+								border-radius: 22px
+		.expandable-checkbox-list
+			display: flex
+			justify-content: space-between
+			align-items: center
+			margin-top: 54px
+			.label
+				margin: 0
