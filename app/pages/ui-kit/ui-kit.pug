@@ -77,17 +77,17 @@ block content
 					input.subscribe.arrow-send(value="Email" type="email")
 		.column
 			.checkbox-buttons
-				label.label-check Checkbox Buttons
-				span Можно курить
-					input.checkbox-btn(type="checkbox")
-				span Можно с питомцами
-					input.checkbox-btn(type="checkbox")
-				span Можно пригласить гостей (до 10 человек)
-					input.checkbox-btn(type="checkbox")
+				h4.label-check Checkbox Buttons
+				input.checkbox-btn#smoke(type="checkbox")
+				label.checkbox(for="smoke") Можно курить
+				input.checkbox-btn#pets(type="checkbox" checked)
+				label.checkbox(for="pets") Можно с питомцами
+				input.checkbox-btn#guests(type="checkbox" checked)
+				label.checkbox(for="guests") Можно пригласить гостей (до 10 человек)
 			.radio-buttons
 				label.label-radio Radio buttons
 					.radio
-						input.radio-btn#men(type="radio" name="radio")
+						input.radio-btn#men(type="radio" name="radio" checked)
 						label.radio-label(for="men") Мужчина
 						input.radio-btn#women(type="radio" name="radio")
 						label.radio-label(for="women") Женщина
