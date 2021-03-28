@@ -207,25 +207,42 @@
 			.label-toggle
 				text-transform: uppercase
 				font-weight: 700
-				span
+				.label
 					font-weight: 400
 					text-transform: none
-					display: block
+					display: inline-block
 					margin-top: 16px
 					position: relative
 					margin-left: 50px
+					transition: .5s ease
 					&::before
 						content: ''
 						width: 40px
 						height: 20px
 						position: absolute
 						left: -50px
-						border: 1px solid $purple
 						border-radius: 10px
-					&:nth-child(2)::before
-						border: 1px solid $accent25
-					.toggle-check
-						display: none
+						transition: .5s ease
+					&::after
+						content: ''
+						width: 12px
+						height: 12px
+						border-radius: 10px
+						display: inline-block
+						position: absolute
+						top: 5px
+				.toggle-check
+					display: none
+				input:not(:checked) + label::before
+					border: 1px solid $accent25
+				input:not(:checked) + label::after
+					background-color: $accent25
+					left: -45px
+				input:checked + label::after
+					background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
+					left: -25px
+				input:checked + label::before
+					border: 1px solid $purple
 		.like-buttons
 			margin-top: 45px
 			.label-like
@@ -614,3 +631,28 @@
 				.material-icons
 					font-size: 48px
 					color: $purple
+		.testimonials
+			margin-top: 236px
+			.user-info
+				display: flex
+				justify-content: flex-start
+				vertical-align: top
+				.avatar
+					width: 48px
+					height: 48px
+					filter: drop-shadow(0px 10px 20px rgba(31, 32, 65, 0.1))
+					background-image: url('img/avatar.png')
+					background-repeat: no-repeat
+					background-size: 150% 150%
+					background-position: 50% 20%
+					border-radius: 32px
+					border: 2px solid #FFFFFF
+				.name
+					font-weight: 700
+					font-size: 14px
+					margin-top: 0
+					margin-left: 10px
+					.activity
+						font-weight: 400
+						display: block
+						margin-top: 15px

@@ -93,10 +93,10 @@ block content
 							input.radio-btn(type="radio" name="radio")
 			.toggle-buttons
 				label.label-toggle Toggle
-					span Получать спецпредложения
-						input.toggle-check(type="checkbox" name="toggle")
-					span Получать спецпредложения
-						input.toggle-check(type="checkbox" name="toggle")
+					input.toggle-check#active(type="checkbox")
+					label.label(for="active")  Получать спецпредложения
+					input.toggle-check#inactive(type="checkbox")
+					label.label(for="inactive") Получать спецпредложения
 			.like-buttons
 				label.label-like Like button
 					.block-btn
@@ -208,6 +208,19 @@ block content
 					input.rich-checkbox__input(type="checkbox" name="rti")
 					label.checkbox-label Помощник для инвалидов
 						span.checkbox-title На 1 этаже вас встретит специалист и проводит до номера.
+			.testimonials
+				.user-info
+					.avatar
+					p.name Мурад Сарафанов
+						span.activity 5 дней назад
+				.testimonials-content
+					.like-button
+						span.like-btn
+							span.material-icons favorite
+							span.digit 12
+							input(type="button")
+					.testimonials-content__text
+						p.text Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.
 		.column
 			.dropdown
 				.dropdown-default
