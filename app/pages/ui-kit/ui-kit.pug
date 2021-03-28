@@ -87,10 +87,10 @@ block content
 			.radio-buttons
 				label.label-radio Radio buttons
 					.radio
-						span Мужчина
-							input.radio-btn(type="radio" name="radio")
-						span Женщина
-							input.radio-btn(type="radio" name="radio")
+						input.radio-btn#men(type="radio" name="radio")
+						label.radio-label(for="men") Мужчина
+						input.radio-btn#women(type="radio" name="radio")
+						label.radio-label(for="women") Женщина
 			.toggle-buttons
 				label.label-toggle Toggle
 					input.toggle-check#active(type="checkbox")
