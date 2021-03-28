@@ -178,13 +178,40 @@ block content
 			.dropdown
 				.dropdown-default
 					label.label Dropdown
-						input.dropdown-default__input(type="text" value="2 спальни, 2 кровати...")
+						input.dropdown-default__input(type="text" value="Сколько гостей")
 						span.material-icons expand_more
-						.dropdown-expand
+						.dropdown-expand-1
 							span.dropdown-expand__item Взрослые
 								span.dropdown-expand__value 0
 							span.dropdown-expand__item Дети
 								span.dropdown-expand__value 0
 							span.dropdown-expand__item Младенцы
 								span.dropdown-expand__value 0
-							a.btn-simple-purple(href="#") Применить
+							.dropdown-expand-1__btn
+								a.btn-simple-purple(href="#") Применить
+			.rich-checkbox
+				h4.label Rich checkbox buttons
+				.rich-checkbox-block
+					input.rich-checkbox__input(type="checkbox" name="rti")
+					label.checkbox-label Широкий коридор
+						span.checkbox-title Ширина коридоров в номере не менее 91 см.
+				.rich-checkbox-block
+					input.rich-checkbox__input(type="checkbox" name="rti")
+					label.checkbox-label Помощник для инвалидов
+						span.checkbox-title На 1 этаже вас встретит специалист и проводит до номера.
+		.column
+			.dropdown
+				.dropdown-default
+					label.label Dropdown
+						input.dropdown-default__input(type="text" value="3 гостя")
+						span.material-icons expand_more
+						.dropdown-expand-1
+							span.dropdown-expand__item Взрослые
+								span.dropdown-expand__value 0
+							span.dropdown-expand__item Дети
+								span.dropdown-expand__value 0
+							span.dropdown-expand__item Младенцы
+								span.dropdown-expand__value 0
+							.dropdown-expand-1__btn
+								a.btn-simple-purple(href="#") Очистить
+								a.btn-simple-purple(href="#") Применить
