@@ -215,3 +215,8 @@ block content
 							.dropdown-expand-1__btn
 								a.btn-simple-purple(href="#") Очистить
 								a.btn-simple-purple(href="#") Применить
+			.bullet-list
+				h4.label Bullet list
+				ul.bullet-list-block
+					each text in ['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00']
+						li.bullet-list__item #{text}
