@@ -93,7 +93,7 @@ block content
 						label.radio-label(for="women") Женщина
 			.toggle-buttons
 				label.label-toggle Toggle
-					input.toggle-check#active(type="checkbox")
+					input.toggle-check#active(type="checkbox" checked)
 					label.label(for="active")  Получать спецпредложения
 					input.toggle-check#inactive(type="checkbox")
 					label.label(for="inactive") Получать спецпредложения
@@ -113,11 +113,11 @@ block content
 					.star-rating
 						.star-rating__wrap
 							each el in ['5', '4', '3', '2', '1']
-								input.star-rating__input(type="radio", name="rating", value=el, id="star-rating-" + el)
-								label.star-rating__ico.material-icons.md-24(for="star-rating-" + el) star_rate
+								input.star-rating__input(type="radio", value=el, id="star-rating-" + el)
+								label.star-rating__ico.material-icons(for="star-rating-" + el) star_rate
 							each el in ['5', '4', '3', '2', '1']
-								input.star-rating__input(type="radio", name="rating", value=el, id="star-rating-" + el)
-								label.star-rating__ico.material-icons.md-24(for="star-rating-" + el) star_rate
+								input.star-rating__input(type="radio", value=el, id="star-rating-" + el)
+								label.star-rating__ico.material-icons(for="star-rating-" + el) star_outline
 		.column
 			.range-slider
 				label.label Range slider
@@ -171,9 +171,10 @@ block content
 					span.material-icons expand_less
 					.expand-checkbox
 						each text, i in ['Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь']
-							div
-								input.checkbox-item__input(type="checkbox", name="check", id="cb" + i)
-								label.checkbox-span #{text}
+							input.checkbox-item__input(type="checkbox", name="check", id="cb" + i)
+							label.checkbox-label(for="cb" + i) #{text}
+							if (i == 2 || i == 3 || i == 4)
+								input.checkbox-item__input(type="checkbox", name="check", id="cb" + i, checked)
 			.icons
 				.icons-item
 					span.material-icons insert_emoticon
