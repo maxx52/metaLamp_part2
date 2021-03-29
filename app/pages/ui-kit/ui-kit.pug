@@ -46,35 +46,17 @@ block content
 		img(src="../../components/logo-m.svg", alt="Toxin")
 	.container-flex
 		.column
-			.text-field
-				label.label-field Text field
-					input.default-field(value="Email" type="email")
-				span.field-title Default
-			.text-field
-				label.label-field Text field
-					span.field-title Hover / Focus
-					input.default-field.hover(value="This is pretty awesome" type="text")
-			.text-field
-				label.label-field Dropdown
-					input.dropdown-field(value="Сколько гостей" type="text" readonly)
-					span(class="material-icons") expand_more
-			.text-field
-				label.label-field Masked text field
-					input.dropdown-field(value="ДД.ММ.ГГГГ" type="text" readonly)
-			.text-field
-				label.label-field(for="arrival") Date Dropdown
-					span(class="material-icons") expand_more
-					input.arrival(value="ДД.ММ.ГГГГ" readonly)
-				label.label-field(for="arrival") Date Dropdown
-					span(class="material-icons") expand_more
-					input.arrival(value="19.08.2019" readonly)
-			.text-field
-				label.label-field(for="date-field") Filter date dropdown
-					input.date-filter(value="19 авг - 23 авг")
-					span(class="material-icons") expand_more
-			.text-field
-				label.label-field(for="subscribe") subscription text field
-					input.subscribe.arrow-send(value="Email" type="email")
+			include fields/fields
+			+field({theme: "has-label", className: "field-default", type: "email", text: "Text field", title: "Default", placeholder: "Email"})
+			+field({theme: "has-label", className: "field-default", type: "text", placeholder: "This is pretty awesome", text: "Text field", title: "Hover / Focus"})
+			+field({theme: "dropdown", className: "field-dropdown", text: "Dropdown", placeholder: "Сколько гостей"})
+			+field({theme: "masked", className: "masked-field", text: "Masked text field", placeholder: "ДД.ММ.ГГГГ"})
+			.date-dropdown
+				+field({theme: "masked", className: "masked-field__short", text: "Date dropdown", placeholder: "ДД.ММ.ГГГГ"})
+				span(class="material-icons") expand_more
+				+field({theme: "masked", className: "masked-field__short", text: "Date dropdown", placeholder: "ДД.ММ.ГГГГ"})
+				span(class="material-icons") expand_more
+			+field({theme: "has-arrow", className: "subscribe-field", type: "email", text: "subscription text field", placeholder: "Email"})
 		.column
 			.checkbox-buttons
 				h4.label-check Checkbox Buttons

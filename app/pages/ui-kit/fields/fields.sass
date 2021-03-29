@@ -1,0 +1,47 @@
+@import "app/sass/main.sass"
+	
+.field
+	display: flex
+	flex-direction: column
+	position: relative
+	&-title
+		text-transform: uppercase
+		font-size: 12px
+		top: 8px
+		position: absolute
+		right: 0
+		font-weight: 400
+		width: auto
+	&-default, &-dropdown, .date-filter, .subscribe
+		width: 320px
+		height: 44px
+		display: block
+		box-sizing: border-box
+		border-radius: 4px
+		border: 1px solid $accent25
+		margin-bottom: 40px
+		color: $accent25
+		padding-left: 15px
+		transition: border .25s ease
+	&-dropdown
+		position: relative
+		cursor: pointer
+		display: flex
+		justify-content: space-between
+		margin-bottom: 20px
+	.material-icons
+		position: absolute
+		z-index: 1000
+		width: 44px
+		height: 44px
+		color: $accent50
+		top: 28px
+		right: -10px
+		display: flex
+		align-items: center
+		text-align: center
+		font-size: 24px
+		line-height: 24px
+
+.date-dropdown
+	display: flex
