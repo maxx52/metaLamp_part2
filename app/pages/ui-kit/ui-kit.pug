@@ -61,14 +61,10 @@ block content
 			+field({theme: "dropdown", className: "field-dropdown", text: "filter date dropdown", placeholder: "19 авг - 23 авг", icon: "expand_more"})
 			+field({theme: "has-arrow", className: "field-subscribe", type: "email", text: "subscription text field", placeholder: "Email", icon: "arrow_forward"})
 		.column
-			.checkbox-buttons
-				h4.label-check Checkbox Buttons
-				input.checkbox-btn#smoke(type="checkbox")
-				label.checkbox(for="smoke") Можно курить
-				input.checkbox-btn#pets(type="checkbox" checked)
-				label.checkbox(for="pets") Можно с питомцами
-				input.checkbox-btn#guests(type="checkbox" checked)
-				label.checkbox(for="guests") Можно пригласить гостей (до 10 человек)
+			include ../../components/buttons/buttons
+			+checkbox({className: "input", text: "Checkbox Buttons", id: "smoke", title: "Можно курить"})
+			+checkbox({className: "input", id: "pets", title: "Можно с питомцами"})
+			+checkbox({className: "input", id: "guests", title: "Можно пригласить гостей (до 10 человек)"})
 			.radio-buttons
 				label.label-radio Radio buttons
 					.radio

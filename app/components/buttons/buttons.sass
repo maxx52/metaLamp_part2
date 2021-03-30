@@ -1,0 +1,41 @@
+@import "../../sass/main"
+	
+.checkbox-buttons
+	&__input
+		display: none
+	.checkbox
+		display: block
+		position: relative
+		margin-left: 30px
+		margin-bottom: 15px
+		font-size: 14px
+		line-height: 18px
+		color: $accent50
+		cursor: pointer
+		&::before
+			content: ''
+			width: 20px
+			height: 20px
+			position: absolute
+			left: -30px
+			border: 1px solid $accent25
+			border-radius: 4px
+			transition: border .25s ease
+		&::after
+			content: ''
+			width: 8px
+			height: 6px
+			display: block
+			border: 1px solid
+			border-image: linear-gradient(180deg, $purple 0%, #8BA4F9 100%)
+			border-top: 0
+			border-right: 0
+			transform: rotate(-45deg)
+			position: absolute
+			top: 6px
+			left: -24px
+			opacity: 0
+		&:hover::before
+			border: 1px solid $accent
+	.checkbox-btn:checked + .checkbox::after
+		opacity: 1

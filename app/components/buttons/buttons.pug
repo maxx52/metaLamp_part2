@@ -1,0 +1,8 @@
+block styles
+	link(rel="stylesheet", href="../../components/buttons/buttons.sass")
+
+mixin checkbox({className, text, title, name, value, id}= "")
+	.checkbox-buttons
+		h3.label= text
+		input(class="checkbox-buttons__" + className, id=id, type="checkbox")
+		label.checkbox(for=id)= title

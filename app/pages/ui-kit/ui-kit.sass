@@ -91,50 +91,6 @@
 		min-width: 260px
 		width: 100%
 		outline: none
-		.checkbox-buttons
-			.label-check
-				text-transform: uppercase
-				font-weight: bold
-				margin-bottom: 16.5px
-				display: block
-				margin-top: 0
-			.checkbox-btn
-				display: none
-			.checkbox
-				display: block
-				position: relative
-				margin-left: 30px
-				margin-bottom: 15px
-				font-size: 14px
-				line-height: 18px
-				color: $accent50
-				&::before
-					content: ''
-					width: 20px
-					height: 20px
-					position: absolute
-					left: -30px
-					border: 1px solid $accent25
-					border-radius: 4px
-					transition: border .25s ease
-				&::after
-					content: ''
-					width: 8px
-					height: 6px
-					display: block
-					border: 1px solid
-					border: linear-gradient(180deg, $purple 0%, #8BA4F9 100%)
-					border-top: 0
-					border-right: 0
-					transform: rotate(-45deg)
-					position: absolute
-					top: 6px
-					left: -24px
-					opacity: 0
-				&:hover::before
-					border: 1px solid $accent
-			.checkbox-btn:checked + .checkbox::after
-				opacity: 1
 		.radio-buttons
 			margin-top: 41px
 			.label-radio
@@ -356,7 +312,6 @@
 						content: ''
 						width: 44px
 						height: 44px
-						background-image: url('../../components/buttons/arrow.svg')
 						background-repeat: no-repeat
 						display: block
 						position: absolute
