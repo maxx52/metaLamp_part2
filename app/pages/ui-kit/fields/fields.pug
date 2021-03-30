@@ -1,0 +1,31 @@
+block styles
+	link(rel="stylesheet", href="./fields/fields.sass")
+
+mixin field({theme, className, type, text, title, placeholder, name, value}= "")
+	case theme
+		when "has-label"
+			.field
+				h3.label= text
+				input(class=className, type=type, placeholder=placeholder, name=name, value=value, autocomplete="off")
+				span.field-title= title
+
+		when "dropdown"
+			.field
+				h3.label= text
+				input(class=className, type=type, placeholder=placeholder, name=name, readonly)
+				span.material-icons expand_more
+
+		when "masked"
+			.field
+				h3.label= text
+				input(class=className, placeholder=placeholder, name=name, readonly)
+
+		when "has-arrow"
+			.field
+				h3.label= text
+				input(class=className, type=type, placeholder=placeholder)
+				span.material-icons arrow_forward
+
+		default
+			.field
+				input(class=className, type=type, placeholder=placeholder)

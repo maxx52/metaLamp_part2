@@ -1,0 +1,63 @@
+.header
+	.container
+		display: flex
+		justify-content: space-between
+		.logo
+			width: 105.69px
+			height: 40px
+			margin: 0
+			margin: 15px 0
+			height: 40px
+		.site-nav
+			height: 40px
+			margin: 15px 0 15px 205px
+			display: flex
+			.nav-list
+				margin: 0
+				padding: 0
+				display: flex
+				align-items: center
+				li
+					position: relative
+					text-align: right
+					list-style-type: none
+					line-height: 17px
+					margin-right: 20px
+					font-size: 14px
+					min-width: 45px
+					&:nth-child(2)::after, &:last-child::after
+						content: ''
+						position: absolute
+						width: 5px
+						height: 5px
+						border-left: 2px solid $accent50
+						border-bottom: 2px solid $accent50
+						right: -10px
+						top: 4px
+						transform: rotate(-45deg)
+					&:nth-child(2)
+						margin-right: 20px
+					.nav-list-item
+						text-decoration: none
+						color: $accent50
+
+		.sign
+			display: flex
+			justify-content: space-between
+			align-items: center
+			font-size: 12px
+			margin-left: 20px
+			&-in
+				padding: 10px 20px
+				text-decoration: none
+				color:#BC9CFF
+				border: 2px solid
+				border-radius: 22px
+			&-up
+				padding: 10px 20px
+				margin-left: 20px
+				margin-right: 0
+				text-decoration: none
+				color: #fff
+				background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
+				border-radius: 22px

@@ -1,0 +1,11 @@
+header.header
+  .container
+    .logo
+      a.link(href="/"): img(src="../../components/logo.svg", alt="Toxin")
+    nav.site-nav
+      ul.nav-list
+        each text in ['UI kit', 'О нас', 'Услуги', 'Вакансии', 'Новости', 'Соглашения']
+          li: a.nav-list-item(href="#")= text
+    .sign
+      a.sign-in(href="#") Войти
+      a.sign-up(href="#") Зарегистрироваться
