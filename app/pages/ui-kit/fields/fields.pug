@@ -1,7 +1,7 @@
 block styles
 	link(rel="stylesheet", href="./fields/fields.sass")
 
-mixin field({theme, className, type, text, title, placeholder, name, value}= "")
+mixin field({theme, className, type, text, title, placeholder, name, value, icon}= "")
 	case theme
 		when "has-label"
 			.field
@@ -13,7 +13,7 @@ mixin field({theme, className, type, text, title, placeholder, name, value}= "")
 			.field
 				h3.label= text
 				input(class=className, type=type, placeholder=placeholder, name=name, readonly)
-				span.material-icons expand_more
+				span.material-icons #{icon}
 
 		when "masked"
 			.field
@@ -24,7 +24,7 @@ mixin field({theme, className, type, text, title, placeholder, name, value}= "")
 			.field
 				h3.label= text
 				input(class=className, type=type, placeholder=placeholder)
-				span.material-icons arrow_forward
+				span.material-icons #{icon}
 
 		default
 			.field

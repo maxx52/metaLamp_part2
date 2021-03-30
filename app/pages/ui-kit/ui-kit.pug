@@ -58,7 +58,8 @@ block content
 				.arrival
 					+field({theme: "masked", className: "field-masked__short", text: "Date dropdown", placeholder: "ДД.ММ.ГГГГ"})
 					span(class="material-icons") expand_more
-			+field({theme: "has-arrow", className: "field-subscribe", type: "email", text: "subscription text field", placeholder: "Email"})
+			+field({theme: "dropdown", className: "field-dropdown", text: "filter date dropdown", placeholder: "19 авг - 23 авг", icon: "expand_more"})
+			+field({theme: "has-arrow", className: "field-subscribe", type: "email", text: "subscription text field", placeholder: "Email", icon: "arrow_forward"})
 		.column
 			.checkbox-buttons
 				h4.label-check Checkbox Buttons
@@ -130,23 +131,15 @@ block content
 				p.pagination-title 1 – 12 из 100+ вариантов аренды
 		.column
 			.dropdown
-				.dropdown-default
-					label.label Dropdown
-						input.dropdown-default__input(type="text" value="2 спальни, 2 кровати...")
-						span.material-icons expand_more
-						span.dropdown-title Default
-				.dropdown-default
-					label.label Dropdown
-						input.dropdown-default__input(type="text" value="2 спальни, 2 кровати...")
-						span.material-icons expand_more
-						span.dropdown-title Expanded
-						.dropdown-expand
-							span.dropdown-expand__item Спальни
-								span.dropdown-expand__value 2
-							span.dropdown-expand__item Кровати
-								span.dropdown-expand__value 2
-							span.dropdown-expand__item Ванные комнаты
-								span.dropdown-expand__value 0
+				+field({theme: "dropdown", className: "field-dropdown", placeholder: "2 спальни, 2 кровати...", text: "Dropdown", icon: "expand_more"})
+				+field({theme: "dropdown", className: "field-dropdown", placeholder: "2 спальни, 2 кровати...", text: "Dropdown", icon: "expand_more"})
+				.dropdown-expand
+					span.dropdown-expand__item Спальни
+						span.dropdown-expand__value 2
+					span.dropdown-expand__item Кровати
+						span.dropdown-expand__value 2
+					span.dropdown-expand__item Ванные комнаты
+						span.dropdown-expand__value 0
 				.expandable-checkbox-list
 					h4.label Expandable checkbox list
 					span.material-icons expand_more
@@ -170,19 +163,16 @@ block content
 						span.icons-item-description Окно в каждой из спален
 		.column
 			.dropdown
-				.dropdown-default
-					label.label Dropdown
-						input.dropdown-default__input(type="text" value="Сколько гостей")
-						span.material-icons expand_more
-						.dropdown-expand-1
-							span.dropdown-expand__item Взрослые
-								span.dropdown-expand__value 0
-							span.dropdown-expand__item Дети
-								span.dropdown-expand__value 0
-							span.dropdown-expand__item Младенцы
-								span.dropdown-expand__value 0
-							.dropdown-expand-1__btn
-								a.btn-simple-purple(href="#") Применить
+				+field({theme: "dropdown", className: "field-dropdown", placeholder: "Сколько гостей", icon: "expand_more", text: "Dropdown"})
+				.dropdown-expand-1
+					span.dropdown-expand__item Взрослые
+						span.dropdown-expand__value 0
+					span.dropdown-expand__item Дети
+						span.dropdown-expand__value 0
+					span.dropdown-expand__item Младенцы
+						span.dropdown-expand__value 0
+					.dropdown-expand-1__btn
+						a.btn-simple-purple(href="#") Применить
 			.rich-checkbox
 				h4.label Rich checkbox buttons
 				.rich-checkbox-block
@@ -208,20 +198,17 @@ block content
 						p.text Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.
 		.column
 			.dropdown
-				.dropdown-default
-					label.label Dropdown
-						input.dropdown-default__input(type="text" value="3 гостя")
-						span.material-icons expand_more
-						.dropdown-expand-1
-							span.dropdown-expand__item Взрослые
-								span.dropdown-expand__value 0
-							span.dropdown-expand__item Дети
-								span.dropdown-expand__value 0
-							span.dropdown-expand__item Младенцы
-								span.dropdown-expand__value 0
-							.dropdown-expand-1__btn
-								a.btn-simple-purple(href="#") Очистить
-								a.btn-simple-purple(href="#") Применить
+				+field({theme: "dropdown", className: "field-dropdown", placeholder: "3 гостя", icon: "expand_more", text: "Dropdown"})
+				.dropdown-expand-1
+					span.dropdown-expand__item Взрослые
+						span.dropdown-expand__value 0
+					span.dropdown-expand__item Дети
+						span.dropdown-expand__value 0
+					span.dropdown-expand__item Младенцы
+						span.dropdown-expand__value 0
+					.dropdown-expand-1__btn
+						a.btn-simple-purple(href="#") Очистить
+						a.btn-simple-purple(href="#") Применить
 			.bullet-list
 				h4.label Bullet list
 				ul.bullet-list-block

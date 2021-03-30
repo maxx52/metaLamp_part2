@@ -401,67 +401,6 @@
 				font-size: 14px
 				line-height: 24px
 
-		.dropdown
-			&-default__input
-				display: flex
-				align-items: center
-				width: 100%
-				height: 44px
-				margin-top: 5px
-				border-radius: 2px
-				margin-bottom: 0
-				padding: 12px 0 8px 15px
-			.material-icons
-				position: absolute
-				width: 44px
-				height: 44px
-				text-align: center
-				right: 0
-				top: 36px
-				box-sizing: border-box
-				display: block
-			&-title
-				position: absolute
-				right: 0
-				top: 0
-				font-weight: 400
-				color: $accent50
-				font-size: 12px
-			&-expand
-				height: 119px
-				border: 1px solid $accent50
-				border-top: 0
-				border-radius: 2px
-				margin: 0
-				&__item
-					font-size: 12px
-					display: flex
-					justify-content: space-between
-					padding: 10px 0 11px 15px
-					.dropdown-expand__value
-						width: 92px
-						text-align: center
-						position: relative
-						display: flex
-						justify-content: space-around
-						&::before
-							content: '-'
-							width: 30px
-							height: 30px
-							border: 1px solid $accent25
-							position: absolute
-							left: 0
-							top: -5px
-							border-radius: 22px
-						&::after
-							content: '+'
-							width: 30px
-							height: 30px
-							border: 1px solid $accent25
-							position: absolute
-							right: 5px
-							top: -5px
-							border-radius: 22px
 		.expandable-checkbox-list
 			display: inline-block
 			margin-top: 54px
@@ -506,27 +445,24 @@
 				.checkbox-item__input:checked + .checkbox-label::after
 					opacity: 1
 		.dropdown
-			&-default
-				.label
-					.dropdown-default-input
-						color: $accent50
-					.dropdown-expand-1
-						height: 159px
-						border: 1px solid $accent50
-						box-shadow: 0px 10px 20px 0px rgba(31, 32, 65, 0.05)
-						border-radius: 2px
-						&__btn
-							display: flex
-							justify-content: space-between
-							.btn-simple-purple
-								text-decoration: none
-								font-size: 12px
-								color: $purple
-								float: right
-								margin-top: 19px
-								margin-right: 7px
-								margin-left: 7px
-								display: block
+			&-expand-1
+				height: 159px
+				border: 1px solid $accent50
+				border-top: 0
+				box-shadow: 0px 10px 20px 0px rgba(31, 32, 65, 0.05)
+				border-radius: 2px
+				&__btn
+					display: flex
+					justify-content: space-between
+					.btn-simple-purple
+						text-decoration: none
+						font-size: 12px
+						color: $purple
+						float: right
+						margin-top: 19px
+						margin-right: 7px
+						margin-left: 7px
+						display: block
 		.rich-checkbox
 			margin-top: 120px
 			&-block
