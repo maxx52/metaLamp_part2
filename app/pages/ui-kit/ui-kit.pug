@@ -66,18 +66,11 @@ block content
 			+checkbox({className: "input", id: "pets", title: "Можно с питомцами"})
 			+checkbox({className: "input", id: "guests", title: "Можно пригласить гостей (до 10 человек)"})
 			.radio-buttons
-				label.label-radio Radio buttons
-					.radio
-						input.radio-btn#men(type="radio" name="radio" checked)
-						label.radio-label(for="men") Мужчина
-						input.radio-btn#women(type="radio" name="radio")
-						label.radio-label(for="women") Женщина
+				+radio({classRadio: "radio-btn", classLabel: "radio-label", name: "radio-mf", label: "Radio Buttons", text: "Мужчина", id: "male"})
+				+radio({classRadio: "radio-btn", classLabel: "radio-label", name: "radio-mf", text: "Женщина", id: "female"})
 			.toggle-buttons
-				label.label-toggle Toggle
-					input.toggle-check#active(type="checkbox" checked)
-					label.label(for="active")  Получать спецпредложения
-					input.toggle-check#inactive(type="checkbox")
-					label.label(for="inactive") Получать спецпредложения
+				+toggle({classInput: "toggle-input", classLabel: "toggle-label", title: "Toggle", id: "t1", text: "Получать спецпредложения"})
+				+toggle({classInput: "toggle-input", classLabel: "toggle-label", id: "t2", text: "Получать спецпредложения"})
 			.like-buttons
 				label.label-like Like button
 					.block-btn

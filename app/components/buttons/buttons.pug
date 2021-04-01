@@ -6,3 +6,21 @@ mixin checkbox({className, text, title, name, value, id}= "")
 		h3.label= text
 		input(class="checkbox-buttons__" + className, id=id, type="checkbox")
 		label.checkbox(for=id)= title
+
+mixin radio({classRadio, classLabel, id, name, text, label}= "")
+	h3.label= label
+	input(class=classRadio, type="radio", name=name,  id=id, checked=check)
+	label(class=classLabel, for=id)= text
+
+mixin toggle({classInput, classLabel, title, id, text}= "")
+	h3.label= title
+	input(type="checkbox", class=classInput, id=id)
+	label(for=id, class=classLabel)= text
+
+mixin like-button({digit})
+	h3.label= title
+	.block-btn
+		span.like-btn
+			span.material-icons favorite_border
+			span.digit 2
+			input(type="button")
