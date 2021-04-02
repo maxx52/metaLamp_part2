@@ -118,7 +118,7 @@
 			.irs-min, .irs-max
 				display: none
 
-		.buttons-btn
+		.buttons
 			margin-top: 45px
 			margin-bottom: 16px
 			.buttons-gradient, .buttons-not-gradient
@@ -129,6 +129,7 @@
 				> a
 					padding: 14px 21px 15px 19px
 					border-radius: 22px
+					text-decoration: none
 				.btn-gradient
 					background: linear-gradient(180deg, $purple 0%, #8BA4F9 100%)
 					color: #fff
@@ -139,8 +140,8 @@
 			.buttons-not-gradient
 				> a
 					border: 2px solid
-					padding: 13px 19px 14px 19px
-				.btn-not-gradient
+					padding: 13px 19px
+				.btn
 					border: 2px solid
 					color: $purple
 					&__active
@@ -158,31 +159,29 @@
 					color: $purple
 				.btn-simple
 					color: $accent50
-			.button-arrow
+			.btn-arrow
 				margin-top: 30px
 				text-align: center
-				.arrow-btn
-					padding: 15px 20px
-					color: #fff
-					text-transform: uppercase
-					text-decoration: none
-					background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
-					font-size: 12px
-					font-weight: 700
-					width: 320px
-					display: block
-					border-radius: 22px
-					position: relative
-					&::after
-						content: ''
-						width: 44px
-						height: 44px
-						background-repeat: no-repeat
-						display: block
-						position: absolute
-						right: 0
-						top: 15px
-						text-align: center
+				padding: 15px 20px
+				color: #fff
+				text-transform: uppercase
+				text-decoration: none
+				background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
+				font-size: 12px
+				font-weight: 700
+				width: 320px
+				display: block
+				border-radius: 22px
+				position: relative
+				.material-icons
+					position: absolute
+					right: 0
+					top: 0
+					text-align: center
+					width: 44px
+					height: 44px
+					display: flex
+					align-items: center
 		.pagination
 			margin-top: 40px
 			display: block

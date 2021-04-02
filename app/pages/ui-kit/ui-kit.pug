@@ -85,19 +85,15 @@ block content
 				h3.label Range slider
 				span.range-slider__price
 				input.js-range-slider(type="text" name="my_range")
-			.buttons-btn
-				label.label Buttons
+			.buttons
+				h3.label Buttons
 				.buttons-gradient
-					a.btn.btn-gradient(href="#") Click me
-					a.btn.btn-gradient__active(href="#") Click me
+					+button-gradient({classButton: "btn-gradient", text: "Click me", url: "#"})
+					+button-gradient-active({classButton: "btn-gradient", text: "Click me", url: "#"})
 				.buttons-not-gradient
-					a.btn.btn-not-gradient(href="#") Click me
-					a.btn.btn-not-gradient__active(href="#") Click me
-				.buttons-simple
-					a.btn-simple-purple(href="#") Click me
-					a.btn-simple(href="#") Click me
-				.button-arrow
-					a.arrow-btn(href="#") Перейти к оплате
+					+button({classButton: "btn", text: "Click me", url: "#"})
+					+button-active({classButton: "btn", text: "Click me", url: "#"})
+				+button-arrow({classButton: "btn-arrow", text: "Перейти к оплате", url: "#"})
 			.pagination
 				h4.label Pagination
 				ul.pagination-list

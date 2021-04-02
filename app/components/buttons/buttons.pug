@@ -31,3 +31,19 @@ mixin rate({classBlock, icon, iconOutline}= "")
 			each el in ['5', '4', '3', '2', '1']
 				input(type="radio", value=el, id=classBlock + "-" + el, class=classBlock + "__input")
 				label(for="star-rating-" + el, class="material-icons " + classBlock + "__ico")= iconOutline
+			
+mixin button-gradient({classButton, text, url})
+	a(href=url, class=classButton)= text
+
+mixin button-gradient-active({classButton, text, url})
+	a(href=url, class=classButton + "__active")= text
+
+mixin button({classButton, text, url})
+	a(href=url, class=classButton)= text
+
+mixin button-active({classButton, text, url})
+	a(href=url, class=classButton + "__active")= text
+
+mixin button-arrow({classButton, text, url})
+	a(href=url, class=classButton)= text
+		span(class="material-icons") arrow_forward
