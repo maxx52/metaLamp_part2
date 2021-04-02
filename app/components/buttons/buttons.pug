@@ -53,3 +53,8 @@ mixin button-active({classButton, text, url})
 mixin button-arrow({classButton, text, url})
 	a(href=url, class=classButton)= text
 		span(class="material-icons") arrow_forward
+
+mixin bullet-list({text1, text2, text3})
+	ul.bullet-list-block
+		each text in [text1, text2, text3]
+			li.bullet-list__item #{text}

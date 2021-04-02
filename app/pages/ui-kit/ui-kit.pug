@@ -178,9 +178,7 @@ block content
 						a.btn-simple-purple(href="#") Применить
 			.bullet-list
 				h4.label Bullet list
-				ul.bullet-list-block
-					each text in ['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00']
-						li.bullet-list__item #{text}
+				+bullet-list({text1: "Нельзя с питомцами", text2: "Без вечеринок и мероприятий", text3: "Время прибытия — после 13:00, а выезд до 12:00"})
 			
 block script
 	script(src="ui-kit.js") 
