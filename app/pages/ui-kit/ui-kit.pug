@@ -147,14 +147,9 @@ block content
 						a.btn-simple-purple(href="#") Применить
 			.rich-checkbox
 				h4.label Rich checkbox buttons
-				.rich-checkbox-block
-					input.rich-checkbox__input(type="checkbox" name="rti" id="rti1")
-					label.checkbox-label Широкий коридор
-						span.checkbox-title Ширина коридоров в номере не менее 91 см.
-				.rich-checkbox-block
-					input.rich-checkbox__input(type="checkbox" name="rti" id="rti2")
-					label.checkbox-label Помощник для инвалидов
-						span.checkbox-title На 1 этаже вас встретит специалист и проводит до номера.
+				+checkbox-rich({name: "rti", id: "rti1", classInput: "rich-checkbox", classLabel: "checkbox-label", classDescription: "checkbox-title", text: "Ширина коридоров в номере не менее 91 см.", label: "Широкий коридор"})
+				+checkbox-rich({name: "rti", id: "rti2", classInput: "rich-checkbox", classLabel: "checkbox-label", classDescription: "checkbox-title", text: "На 1 этаже вас встретит специалист  и проводит до номера.", label: "Помощник для инвалидов"})
+				
 			.testimonials
 				.user-info
 					.avatar

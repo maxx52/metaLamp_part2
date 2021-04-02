@@ -7,6 +7,12 @@ mixin checkbox({className, text, title, name, value, id}= "")
 		input(class="checkbox-buttons__" + className, id=id, type="checkbox")
 		label.checkbox(for=id)= title
 
+mixin checkbox-rich({name, id, classInput, classLabel, classDescription, text, label})
+	.rich-checkbox-block
+		input(type="checkbox", name=name, id=id, class=classInput + "__input")
+		label(class=classLabel, for=id)= label
+			span(class=classDescription)= text
+
 mixin radio({classRadio, classLabel, id, name, text}= "")
 	input(class=classRadio, type="radio", name=name,  id=id, checked=check)
 	label(class=classLabel, for=id)= text
