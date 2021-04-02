@@ -42,32 +42,38 @@
 
 .radio-buttons
 	margin-top: 41px
-	.radio-btn
-		display: none
-	.radio-label
-		font-weight: 400
-		text-transform: none
-		position: relative
-		margin-left: 30px
-		cursor: pointer
-		&::before
-			content: ''
-			width: 20px
-			height: 20px
-			position: absolute
-			left: -30px
-			border-radius: 10px
-			border: 1px solid $accent25
-			display: block
-		&::after
-			content: ''
-			width: 12px
-			height: 12px
-			border-radius: 10px
-			display: block
-			position: absolute
-			top: 5px
-			left: -25px
+	.radio-box
+		display: flex
+		justify-content: space-between
+		margin-top: 16px
+		.radio-btn
+			display: none
+		.radio-label
+			font-weight: 400
+			text-transform: none
+			font-size: 14px
+			color: $accent75
+			position: relative
+			margin-left: 30px
+			cursor: pointer
+			&::before
+				content: ''
+				width: 20px
+				height: 20px
+				position: absolute
+				left: -30px
+				border-radius: 10px
+				border: 1px solid $accent25
+				display: block
+			&::after
+				content: ''
+				width: 12px
+				height: 12px
+				border-radius: 10px
+				display: block
+				position: absolute
+				top: 5px
+				left: -25px
 		.radio-btn:not(:checked) + .radio-label::before
 			border: 1px solid $accent25
 		.radio-btn:checked + .radio-label::after
@@ -103,13 +109,54 @@
 			top: 5px
 	.toggle-input
 		display: none
-	input:not(:checked) + label::before
+	.toggle-input:not(:checked) + label::before
 		border: 1px solid #000
-	input:not(:checked) + label::after
+	.toggle-input:not(:checked) + label::after
 		background-color: $accent25
 		left: -45px
-	input:checked + label::after
+	.toggle-input:checked + label::after
 		background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
 		left: -25px
-	input:checked + label::before
+	.toggle-input:checked + label::before
 		border: 1px solid $purple
+
+.like-buttons
+	margin-top: 45px
+	.like-label
+		font-size: 10px
+		color: $accent25
+	.like-btn
+		width: 40px
+		height: 20px
+		border: 1px solid $accent25
+		border-radius: 10px
+		margin-top: 16px
+		margin-right: 10px
+		display: inline-block
+		.material-icons
+			width: 20px
+			height: 20px
+			font-size: 10px
+			line-height: 8.5px
+			text-align: center
+			margin-top: 6px
+			color: $accent25
+			&:nth-child(2)
+				color: $purple
+		input
+			display: none
+
+.rate-buttons
+	margin-top: 40px
+	.label
+		text-transform: uppercase
+		font-weight: 700
+	.star-rating
+		margin-top: 16px
+		&__wrap
+			overflow: hidden
+			&:not(:checked) > .star-rating__input
+				display: none
+		&__ico
+			width: 24px
+			height: 24px

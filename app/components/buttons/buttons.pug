@@ -7,8 +7,7 @@ mixin checkbox({className, text, title, name, value, id}= "")
 		input(class="checkbox-buttons__" + className, id=id, type="checkbox")
 		label.checkbox(for=id)= title
 
-mixin radio({classRadio, classLabel, id, name, text, label}= "")
-	h3.label= label
+mixin radio({classRadio, classLabel, id, name, text}= "")
 	input(class=classRadio, type="radio", name=name,  id=id, checked=check)
 	label(class=classLabel, for=id)= text
 
@@ -17,10 +16,18 @@ mixin toggle({classInput, classLabel, title, id, text}= "")
 	input(type="checkbox", class=classInput, id=id)
 	label(for=id, class=classLabel)= text
 
-mixin like-button({digit})
-	h3.label= title
-	.block-btn
-		span.like-btn
-			span.material-icons favorite_border
-			span.digit 2
-			input(type="button")
+mixin like({digit, classLabel, classInput}= "")
+	span.like-btn
+		span.material-icons favorite_border
+		input(type="button", class=classInput)
+		label(class=classLabel)= digit
+
+mixin rate({classBlock, icon, iconOutline}= "")
+	div(class=classBlock)
+		div(class=classBlock + "__wrap")
+			each el in ['5', '4', '3', '2', '1']
+				input(type="radio", value=el, id=classBlock + "-" + el, class=classBlock + "__input")
+				label(for="star-rating-" + el, class="material-icons " + classBlock + "__ico")= icon
+			each el in ['5', '4', '3', '2', '1']
+				input(type="radio", value=el, id=classBlock + "-" + el, class=classBlock + "__input")
+				label(for="star-rating-" + el, class="material-icons " + classBlock + "__ico")= iconOutline
