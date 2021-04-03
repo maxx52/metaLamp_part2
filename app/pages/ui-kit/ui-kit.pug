@@ -156,11 +156,8 @@ block content
 					p.name Мурад Сарафанов
 						span.activity 5 дней назад
 				.testimonials-content
-					.like-button
-						span.like-btn
-							span.material-icons favorite
-							span.digit 12
-							input(type="button")
+					.like-buttons
+						+like({digit: "12", classLabel: "like-label", classInput: "like-input"})
 					.testimonials-content__text
 						p.text Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.
 		.column
